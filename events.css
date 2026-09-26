@@ -1,0 +1,159 @@
+
+.events-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.events-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.event-card-large {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card-large:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-image {
+    position: relative;
+
+    height: 220px;
+}
+
+.event-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.event-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    background: #d4a373;
+
+    color: #2b1810;
+
+    font-weight: bold;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-content h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.3rem;
+}
+
+.event-content > p {
+    color: #666;
+}
+
+.event-date {
+    color: #a66b2c !important;
+
+    font-weight: bold;
+
+    margin: 10px 0 !important;
+}
+
+.event-form {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+.event-form input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.event-form input:focus {
+    border-color: #8b5e3c;
+}
+
+.event-form .btn {
+    width: 100%;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .events-grid,
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .events-grid,
+    .events-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .event-card-large {
+        width: 100%;
+    }
+
+    .event-image {
+        height: 220px;
+    }
+
+    .event-content {
+        padding: 20px;
+    }
+}
